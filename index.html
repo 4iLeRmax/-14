@@ -4,18 +4,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20220926162159">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221001154329">
   <title>Главная</title>
 </head>
 <body>
+  
+  <div class="preloader">
+    <div class="loader">
+      <div class="loadingio-spinner-spinner-8n8j0wycs9o">
+        <div class="ldio-0n17xou0ufb">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <div class="wrapper">
   <header>
   <div class="aside">
-    <img src="img/Logo.svg"class="logo">
+
+    <a href="index.html" class="logo">
+      <img src="img/Logo.svg">
+    </a>
+
     <ul class="menu">
       <li><a href="#"><img src="img/menu icon 1.svg">Пицца</a></li>
-      <li><a href="#"><img src="img/menu icon 2.svg">Сеты</a></li>
+      <li><a href="products.html"><img src="img/menu icon 2.svg">Сеты</a></li>
       <li><a href="#"><img src="img/menu icon 3.svg">WOK</a></li>
       <li><a href="#"><img src="img/menu icon 4.svg">Роллы</a></li>
       <li><a href="#"><img src="img/menu icon 5.svg">Суши</a></li>
@@ -47,8 +72,24 @@
           <p class="city__sub_title">Бишкек</p>
         </div>
         <div class="header__add_info">
-          <a href="#" class="reviews">Отзывы</a>
-          <a href="#" class="pay">Доставка и оплата</a>
+          <a href="comments.html" class="reviews">Отзывы</a>
+          <button class="pay">Доставка и оплата
+            <div class="pay__add_info">
+              <div class="info">
+                <h1 class="info__title">Сортировка</h1>
+                <div class="select__wrapper">
+                  <select name="select-category" class="select">
+                    <option value="1">По умолчанию</option>
+                    <option value="2">Название</option>
+                    <option value="3">Сначала дешевле</option>
+                    <option value="4">Сначала дешевле</option>
+                    <option value="5">Количество кусочков</option>
+                    <option value="6">Все</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </button>
           <img src="img/search.svg" class="search">
         </div>
       </div>
@@ -56,9 +97,31 @@
 
     <div class="main__content">
       <div class="container">
-        <div class="slider">
-          <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.jpg"></picture>
+        <div class="slider__block">
+          <div class="slider">
+            <div class="slides">
+              <input type="radio" name="radio_btn" id="radio1">
+              <input type="radio" name="radio_btn" id="radio2">
+              <input type="radio" name="radio_btn" id="radio3">
+              <div class="slide first">
+                <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.jpg"></picture>
+              </div>
+              <div class="slide">
+                <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.jpg"></picture>
+              </div>
+              <div class="slide">
+                <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.jpg"></picture>
+              </div>
+            </div>
+          </div>
+          <div class="navigation_manual">
+            <label for="radio1" class="manual_btn"></label>
+            <label for="radio2" class="manual_btn"></label>
+            <label for="radio3" class="manual_btn"></label>
+          </div>
         </div>
+
+        
         <div class="food__cards">
           <div class="food__card">
             <img src="img/food 1.jpg">
@@ -86,384 +149,385 @@
       <div class="novelties">
         <div class="tabs">
 
+          <div class="container">
             <div class="novelties__btns">
-              <button class="novelties__btn active" type="button" data-tab="#tab_1">Новинки</button>
-              <button class="novelties__btn" type="button" data-tab="#tab_2">Популярное</button>
+              <button class="novelties__btn" type="button" data-tab="#tab_1">Новинки</button>
+              <button class="novelties__btn active" type="button" data-tab="#tab_2">Популярное</button>
             </div>
-            
-          <div class="novelties__arrows">
-            <button class="novelties__arrow" id="prev"><img src="img/arrows.svg"></button>
-            <button class="novelties__arrow" id="next"><img src="img/arrows.svg"></button>
           </div>
+            
           <div class="tabs_content">
 
-            <div class="tabs_item active" id="tab_1">
-              <div class="novelties__cards">
-
-                <div class="novelties__card" id="lastClone">
-                  <div class="card">
-                    <img src="img/ncard 7.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Топовый сет</h1>
-                    <p class="novelties__sub_title">1020 грамм 40 кусочек</p>
+            <div class="tabs_item" id="tab_1">
+              <div class="novelties__arrows">
+                <button class="novelties__arrow" id="prev"><img src="img/arrows.svg"></button>
+                <button class="novelties__arrow" id="next"><img src="img/arrows.svg"></button>
+              </div>
+              <div class="tab1">
+                <div class="novelties__cards">
+                  <div class="novelties__card" id="lastClone">
+                    <div class="card">
+                      <img src="img/ncard 1.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Саломон сет</h1>
+                      <p class="novelties__sub_title">1050 грамм, 30 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1500 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 2.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
+                      <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1150 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 3.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Самая большая Филадельфия</h1>
+                      <p class="novelties__sub_title">2050 грамм, 45 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>2100 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
-                  <div class="novelties__add_info">
-                    <p>1519 СОМ</p>
-                    <button>Хочу!</button>
+                  <div class="novelties__card">
+                    <div class="card">
+                      <img src="img/ncard 7.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Топовый сет</h1>
+                      <p class="novelties__sub_title">1020 грамм 40 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1519 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 8.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Камикадзе сет</h1>
+                      <p class="novelties__sub_title">1200 грамм 52 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1469 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 9.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Сет "4 Филадельфии"</h1>
+                      <p class="novelties__sub_title">1100 грамм 32 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1559 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
+                  <div class="novelties__card">
+                    <div class="card">
+                      <img src="img/ncard 4.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Сет "5 Филадельфий"</h1>
+                      <p class="novelties__sub_title">1120 грамм 40 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1499 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 5.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
+                      <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1499 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 6.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Сет "6 Филадельфий"</h1>
+                      <p class="novelties__sub_title">1320 грамм 46 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1559 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
-                  <div class="card">
-                    <img src="img/ncard 8.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Камикадзе сет</h1>
-                    <p class="novelties__sub_title">1200 грамм 52 кусочек</p>
+                  <div class="novelties__card">
+                    <div class="card">
+                      <img src="img/ncard 1.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Саломон сет</h1>
+                      <p class="novelties__sub_title">1050 грамм, 30 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1500 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 2.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
+                      <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1150 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 3.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Самая большая Филадельфия</h1>
+                      <p class="novelties__sub_title">2050 грамм, 45 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>2100 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
-                  <div class="novelties__add_info">
-                    <p>1469 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 9.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Сет "4 Филадельфии"</h1>
-                    <p class="novelties__sub_title">1100 грамм 32 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1559 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
+                  <div class="novelties__card" id="firstClone">
+                    <div class="card">
+                      <img src="img/ncard 7.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Топовый сет</h1>
+                      <p class="novelties__sub_title">1020 грамм 40 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1519 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 8.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Камикадзе сет</h1>
+                      <p class="novelties__sub_title">1200 грамм 52 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1469 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 9.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Сет "4 Филадельфии"</h1>
+                      <p class="novelties__sub_title">1100 грамм 32 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1559 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
                 </div>
-                <div class="novelties__card">
-                  <div class="card">
-                    <img src="img/ncard 1.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Саломон сет</h1>
-                    <p class="novelties__sub_title">1050 грамм, 30 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1500 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 2.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
-                    <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1150 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 3.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Самая большая Филадельфия</h1>
-                    <p class="novelties__sub_title">2050 грамм, 45 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>2100 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                </div>
-                <div class="novelties__card">
-                  <div class="card">
-                    <img src="img/ncard 4.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Сет "5 Филадельфий"</h1>
-                    <p class="novelties__sub_title">1120 грамм 40 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1499 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 5.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
-                    <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1499 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 6.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Сет "6 Филадельфий"</h1>
-                    <p class="novelties__sub_title">1320 грамм 46 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1559 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                </div>
-                <div class="novelties__card">
-                  <div class="card">
-                    <img src="img/ncard 7.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Топовый сет</h1>
-                    <p class="novelties__sub_title">1020 грамм 40 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1519 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 8.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Камикадзе сет</h1>
-                    <p class="novelties__sub_title">1200 грамм 52 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1469 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 9.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Сет "4 Филадельфии"</h1>
-                    <p class="novelties__sub_title">1100 грамм 32 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1559 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                </div>
-                <div class="novelties__card" id="firstClone">
-                  <div class="card">
-                    <img src="img/ncard 1.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Саломон сет</h1>
-                    <p class="novelties__sub_title">1050 грамм, 30 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1500 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 2.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
-                    <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1150 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 3.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Самая большая Филадельфия</h1>
-                    <p class="novelties__sub_title">2050 грамм, 45 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>2100 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                </div>
-
               </div>
             </div>
 
-
-
-
-
-            <div class="tabs_item" id="tab_2">
-
-              <!-- <div class="novelties__cards novelties__cardsT">
-
-                <div class="novelties__card novelties__cardT" id="lastClone">
-                  <div class="card">
-                    <img src="img/ncard 7.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Топовый сет</h1>
-                    <p class="novelties__sub_title">1020 грамм 40 кусочек</p>
+            <div class="tabs_item active" id="tab_2">
+              <div class="novelties__arrows">
+                <button class="novelties__arrowT" id="prev"><img src="img/arrows.svg"></button>
+                <button class="novelties__arrowT" id="next"><img src="img/arrows.svg"></button>
+              </div>
+              <div class="tab2">
+                <div class="novelties__cardsT">
+                  <div class="novelties__cardT" id="lastClone">
+                    <div class="card">
+                      <img src="img/ncard 7.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Топовый сет</h1>
+                      <p class="novelties__sub_title">1020 грамм 40 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1519 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 8.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Камикадзе сет</h1>
+                      <p class="novelties__sub_title">1200 грамм 52 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1469 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 9.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Сет "4 Филадельфии"</h1>
+                      <p class="novelties__sub_title">1100 грамм 32 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1559 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
-                  <div class="novelties__add_info">
-                    <p>1519 СОМ</p>
-                    <button>Хочу!</button>
+                  <div class="novelties__cardT">
+                    <div class="card">
+                      <img src="img/ncard 1.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Саломон сет</h1>
+                      <p class="novelties__sub_title">1050 грамм, 30 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1500 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 2.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
+                      <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1150 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 3.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Самая большая Филадельфия</h1>
+                      <p class="novelties__sub_title">2050 грамм, 45 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>2100 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
+                  <div class="novelties__cardT">
+                    <div class="card">
+                      <img src="img/ncard 4.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Сет "5 Филадельфий"</h1>
+                      <p class="novelties__sub_title">1120 грамм 40 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1499 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 5.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
+                      <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1499 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 6.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Сет "6 Филадельфий"</h1>
+                      <p class="novelties__sub_title">1320 грамм 46 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1559 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
-                  <div class="card">
-                    <img src="img/ncard 8.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Камикадзе сет</h1>
-                    <p class="novelties__sub_title">1200 грамм 52 кусочек</p>
+                  <div class="novelties__cardT">
+                    <div class="card">
+                      <img src="img/ncard 7.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Топовый сет</h1>
+                      <p class="novelties__sub_title">1020 грамм 40 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1519 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 8.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Камикадзе сет</h1>
+                      <p class="novelties__sub_title">1200 грамм 52 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1469 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 9.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Сет "4 Филадельфии"</h1>
+                      <p class="novelties__sub_title">1100 грамм 32 кусочек</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1559 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
-                  <div class="novelties__add_info">
-                    <p>1469 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 9.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Сет "4 Филадельфии"</h1>
-                    <p class="novelties__sub_title">1100 грамм 32 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1559 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
+                  <div class="novelties__cardT" id="firstClone">
+                    <div class="card">
+                      <img src="img/ncard 1.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title">Саломон сет</h1>
+                      <p class="novelties__sub_title">1050 грамм, 30 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1500 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 2.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
+                      <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>1150 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
+                    <div class="card">
+                      <img src="img/ncard 3.jpg">
+                    <div class="novelties__card__main">
+                      <h1 class="novelties__title mb-15">Самая большая Филадельфия</h1>
+                      <p class="novelties__sub_title">2050 грамм, 45 кусочков</p>
+                    </div>
+                    <div class="novelties__add_info">
+                      <p>2100 СОМ</p>
+                      <button>Хочу!</button>
+                    </div>
+                    </div>
                   </div>
                 </div>
-                <div class="novelties__card novelties__cardT">
-                  <div class="card">
-                    <img src="img/ncard 1.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Саломон сет</h1>
-                    <p class="novelties__sub_title">1050 грамм, 30 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1500 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 2.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
-                    <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1150 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 3.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Самая большая Филадельфия</h1>
-                    <p class="novelties__sub_title">2050 грамм, 45 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>2100 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                </div>
-                <div class="novelties__card novelties__cardT">
-                  <div class="card">
-                    <img src="img/ncard 4.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Сет "5 Филадельфий"</h1>
-                    <p class="novelties__sub_title">1120 грамм 40 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1499 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 5.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
-                    <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1499 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 6.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Сет "6 Филадельфий"</h1>
-                    <p class="novelties__sub_title">1320 грамм 46 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1559 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                </div>
-                <div class="novelties__card novelties__cardT">
-                  <div class="card">
-                    <img src="img/ncard 7.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Топовый сет</h1>
-                    <p class="novelties__sub_title">1020 грамм 40 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1519 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 8.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Камикадзе сет</h1>
-                    <p class="novelties__sub_title">1200 грамм 52 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1469 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 9.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Сет "4 Филадельфии"</h1>
-                    <p class="novelties__sub_title">1100 грамм 32 кусочек</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1559 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                </div>
-                <div class="novelties__card novelties__cardT" id="firstClone">
-                  <div class="card">
-                    <img src="img/ncard 1.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title">Саломон сет</h1>
-                    <p class="novelties__sub_title">1050 грамм, 30 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1500 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 2.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Филадельфия и лосось сет</h1>
-                    <p class="novelties__sub_title">1260 грамм, 36 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>1150 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                  <div class="card">
-                    <img src="img/ncard 3.jpg">
-                  <div class="novelties__card__main">
-                    <h1 class="novelties__title mb-15">Самая большая Филадельфия</h1>
-                    <p class="novelties__sub_title">2050 грамм, 45 кусочков</p>
-                  </div>
-                  <div class="novelties__add_info">
-                    <p>2100 СОМ</p>
-                    <button>Хочу!</button>
-                  </div>
-                  </div>
-                </div>
-
-              </div> -->
+              </div>
             </div>
 
             </div>
@@ -554,6 +618,7 @@
 </footer>
 </div>
 
-  <script src="js/app.min.js?_v=20220926162159"></script>
+  <script src="js/app.min.js?_v=20221001154329"></script>
+  <!-- <script src="js/preloader.js?_v=20221001154329"></script> -->
 </body>
 </html>
