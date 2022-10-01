@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221001154329">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221001201940">
   <title>Главная</title>
 </head>
 <body>
@@ -100,10 +100,18 @@
         <div class="slider__block">
           <div class="slider">
             <div class="slides">
-              <input type="radio" name="radio_btn" id="radio1">
-              <input type="radio" name="radio_btn" id="radio2">
-              <input type="radio" name="radio_btn" id="radio3">
+              <input type="radio" name="radio_btn" id="radio1" class="Radio">
+              <input type="radio" name="radio_btn" id="radio2" class="Radio">
+              <input type="radio" name="radio_btn" id="radio3" class="Radio">
+              <input type="radio" name="radio_btn" id="radio4" class="Radio">
+              <input type="radio" name="radio_btn" id="radio5" class="Radio">
               <div class="slide first">
+                <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.jpg"></picture>
+              </div>
+              <div class="slide">
+                <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.jpg"></picture>
+              </div>
+              <div class="slide">
                 <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.jpg"></picture>
               </div>
               <div class="slide">
@@ -115,9 +123,11 @@
             </div>
           </div>
           <div class="navigation_manual">
-            <label for="radio1" class="manual_btn"></label>
-            <label for="radio2" class="manual_btn"></label>
-            <label for="radio3" class="manual_btn"></label>
+            <label for="radio1" class="manual_btn" id="manual_btn1"></label>
+            <label for="radio2" class="manual_btn" id="manual_btn2"></label>
+            <label for="radio3" class="manual_btn" id="manual_btn3"></label>
+            <label for="radio4" class="manual_btn" id="manual_btn4"></label>
+            <label for="radio5" class="manual_btn" id="manual_btn5"></label>
           </div>
         </div>
 
@@ -618,7 +628,7 @@
 </footer>
 </div>
 
-  <script src="js/app.min.js?_v=20221001154329"></script>
-  <!-- <script src="js/preloader.js?_v=20221001154329"></script> -->
+  <script src="js/app.min.js?_v=20221001201940"></script>
+  <!-- <script src="js/preloader.js?_v=20221001201940"></script> -->
 </body>
 </html>
