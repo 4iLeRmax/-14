@@ -8,7 +8,7 @@
   <title>Главная</title>
 </head>
 <body>
-
+  
   <div class="preloader">
     <div class="loader">
       <div class="loadingio-spinner-spinner-8n8j0wycs9o">
@@ -118,88 +118,48 @@
     </div>
 
     <div class="main__content">
+      <div class="container">
+        <div class="order">
 
-      <div class="container2">
-        <div class="comments">
+          <h1 class="order__title">Корзина</h1>
 
-          <div class="comments__header__title">
-            <h1 class="comments__title">Отзывы</h1>
-            <button class="comments__btn">+ Добавить отзыв</button>
-          </div>
-
-          <div class="cooments__cards">
-
-            <div class="comments__card">
-              <div class="comments__card__header">
-                <h1 class="comments__card__name">Розалия</h1>
-                <p class="comments__card__data">02.24.21</p>
+          <div class="basket__product">
+            <img src="img/ncard 1.jpg">
+            <div class="baskte__product__main">
+              <h1 class="basket__product__title">Самая большая Фи...</h1>
+              <div class="product__card__price">
+                <div class="count">
+                  <div class="minus" id="buttonCountMinus"></div>
+                  <div class="amount" id="buttonCountNumber">1</div>
+                  <div class="plus" id="buttonCountPlus"></div>
+                </div>
+                <div class="price" id="num">1500 СОМ</div>
               </div>
-              <p class="comments__card__text">
-                Ваша доставка и ваши блюда лучшие в Харькове!) всегда очень вкусно, вовремя, всегда вежливые курьеры и девушки на телефоне
-              </p>
-            </div>
-
-            <div class="comments__card">
-              <div class="comments__card__header">
-                <h1 class="comments__card__name">Елена</h1>
-                <p class="comments__card__data">02.23.21</p>
-              </div>
-              <p class="comments__card__text">
-                Ооочень вкусно!!!!!
-              </p>
-            </div>
-
-            <div class="comments__card">
-              <div class="comments__card__header">
-                <h1 class="comments__card__name">Сергей Гаврилюк</h1>
-                <p class="comments__card__data">02.23.21</p>
-              </div>
-              <p class="comments__card__text">
-                Заказываем у Вас больше 2 -ух лет, были разные ситуации, но сервис стал лучше, суши вкуснее. За доставку сегодня на время, огромное спасибо, точь-в-точь в минута в минуту. Успехов Вам и приятных бонусов нам )
-              </p>
-            </div>
-
-          </div>
-
-          <button class="comments__btn dn">+ Добавить отзыв</button>
-
-        </div>
-      </div>
-
-    </div>
-
-    <div class="container">
-      <div class="footer">
-        <div class="footer__columns">
-
-          <div class="footer__col footer__col__menu">
-            <a href="#">О компании</a>
-            <a href="#">Доставка и оплата</a>
-            <a href="#">Лента материалов</a>
-            <a href="#">Политика возврата</a>
-          </div>
-
-          <div class="footer__col footer__col__social">
-            <h1 class="footer__col__social__title">Введите номер</h1>
-            <p class="footer__col__social__number">+996 (__) ___ __ __</p>
-            <p class="footer__col__social__text">Выберите удобный мессенджер для общения</p>
-            <div class="footer__col__social__links">
-
-              <a href="https://www.whatsapp.com/" class="social__link"><img src="img/whatsapp.svg"></a>
-              <a href="https://telegram.org/" class="social__link"><img src="img/telegram.svg"></a>
-              <a href="https://www.instagram.com/" class="social__link"><img src="img/instagram.svg"></a>
             </div>
           </div>
 
-          <div class="footer__col footer__col__contacts">
-            <p class="footer__col__contacts__info">Тел:<u>+996 705 188 955</u></p>
-            <p class="footer__col__contacts__info">Тел:<u>+996 555 188 955</u></p>
-            <p class="footer__col__contacts__info">Адрес:Бакаева 126</p>
+          <div class="order__info__card">
+            <h1 class="order__info__title">Итого</h1>
+            <div class="order__info">
+              <h1>1 товар</h1>
+              <p>170 СОМ</p>
+            </div>
+            <div class="order__info">
+              <h1>Скидка</h1>
+              <p>0 СОМ</p>
+            </div>
+            <div class="order__info">
+              <h1>Доставка</h1>
+              <p>Бесплатно</p>
+            </div>
           </div>
+
+          <button class="order__info__btn">Оформить заказ</button>
 
         </div>
       </div>
     </div>
+
 
 
   </main>
@@ -226,5 +186,29 @@
 </div>
 
   <script src="js/app.min.js?_v=20221008183909"></script>
+  <script>
+let buttonCountPlus = document.getElementById("buttonCountPlus");
+let buttonCountMinus = document.getElementById("buttonCountMinus");
+let count = document.getElementById("buttonCountNumber");
+let count2 = document.getElementById("num");
+let number = 1;
+let price = 1500;
+
+buttonCountPlus.addEventListener('click', ()=>{
+    if (number <= 9) {
+        number++;
+        count.innerHTML = number;
+        count2.innerHTML = number * price + " COM";
+    }
+});
+
+buttonCountMinus.addEventListener('click', ()=>{
+    if (number >= 2) {
+        number--;
+        count.innerHTML = number;
+        count2.innerHTML = number * price + " COM";
+    }
+});
+  </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221005203235">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221008183909">
   <title>Главная</title>
 </head>
 <body>
@@ -88,14 +88,14 @@
 
       <div class="mobile_block">
         <div class="menuMobile">
-          <div class="menuMobile__link">
+          <a href="index.html" class="menuMobile__link">
             <img src="img/MM 1.svg">
             <h1 class="menuMobile__link__title">Меню</h1>
-          </div>
-          <div class="menuMobile__link">
+          </a>
+          <a href="order.html" class="menuMobile__link">
             <img src="img/MM 2.svg">
             <h1 class="menuMobile__link__title">Корзина</h1>
-          </div>
+          </a>
           <a href="comments.html" class="menuMobile__link">
             <img src="img/MM 3.svg">
             <h1 class="menuMobile__link__title">Отзывы</h1>
@@ -414,32 +414,38 @@
     </div>
 
     <div class="container">
-        <div class="footer">
-          <div class="footer__columns">
-            <div class="footer__col footer__col__menu">
-              <a href="#">О компании</a>
-              <a href="#">Доставка и оплата</a>
-              <a href="#">Лента материалов</a>
-              <a href="#">Политика возврата</a>
-            </div>
-            <div class="footer__col footer__col__social">
-              <h1 class="footer__col__social__title">Введите номер</h1>
-              <p class="footer__col__social__number">+996 (__) ___ __ __</p>
-              <p class="footer__col__social__text">Выберите удобный мессенджер для общения</p>
-              <div class="footer__col__social__links">
-                <img src="img/whatsapp.svg" class="social__link">
-                <img src="img/telegram.svg" class="social__link">
-                <img src="img/instagram.svg" class="social__link">
-              </div>
-            </div>
-            <div class="footer__col footer__col__contacts">
-              <p class="footer__col__contacts__info">Тел:+996 705 188 955</p>
-              <p class="footer__col__contacts__info">Тел:+996 555 188 955</p>
-              <p class="footer__col__contacts__info">Адрес:Бакаева 126</p>
+      <div class="footer">
+        <div class="footer__columns">
+
+          <div class="footer__col footer__col__menu">
+            <a href="#">О компании</a>
+            <a href="#">Доставка и оплата</a>
+            <a href="#">Лента материалов</a>
+            <a href="#">Политика возврата</a>
+          </div>
+
+          <div class="footer__col footer__col__social">
+            <h1 class="footer__col__social__title">Введите номер</h1>
+            <p class="footer__col__social__number">+996 (__) ___ __ __</p>
+            <p class="footer__col__social__text">Выберите удобный мессенджер для общения</p>
+            <div class="footer__col__social__links">
+
+              <a href="https://www.whatsapp.com/" class="social__link"><img src="img/whatsapp.svg"></a>
+              <a href="https://telegram.org/" class="social__link"><img src="img/telegram.svg"></a>
+              <a href="https://www.instagram.com/" class="social__link"><img src="img/instagram.svg"></a>
             </div>
           </div>
+
+          <div class="footer__col footer__col__contacts">
+            <p class="footer__col__contacts__info">Тел:<u>+996 705 188 955</u></p>
+            <p class="footer__col__contacts__info">Тел:<u>+996 555 188 955</u></p>
+            <p class="footer__col__contacts__info">Адрес:Бакаева 126</p>
+          </div>
+
         </div>
+      </div>
     </div>
+    
   </main>
   
   <footer>
@@ -463,7 +469,7 @@
 </footer>
 </div>
 
-  <script src="js/app.min.js?_v=20221005203235"></script>
+  <script src="js/app.min.js?_v=20221008183909"></script>
   <script>
 
 let btn = document.querySelector('.novelties__add_info__btn');
