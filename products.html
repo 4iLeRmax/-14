@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221008183909">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221014183221">
   <title>Товары</title>
 </head>
 <body>
@@ -73,7 +73,7 @@
           </div>
         </div>
   
-        <div class="header__info">
+        <div class="header__info pr">
           <a href="index.html" class="logoDn">
             <img src="img/logo !text.svg">
           </a>
@@ -86,7 +86,7 @@
             <img src="img/clock.svg">
             <p class="time__text">работаем с 10:00 до 00:00</p>
           </div>
-          <img src="img/search.svg" class="search dn">
+          <!-- <img src="img/search.svg" class="search dn"> -->
         </div>
         <div class="header__main">
           <div class="city">
@@ -112,7 +112,14 @@
                 </div>
               </div>
             </button>
-            <img src="img/search.svg" class="search">
+
+            <div class="search__block" tabindex="0">
+              <input type="text" id="search" spellcheck="false" class="search__input" placeholder="Serach...">
+              <div class="search" tabindex="0">
+                <img src="img/search.svg">
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -333,8 +340,18 @@
   </div>
 </footer>
   </div>
-  <script src="js/app.min.js?_v=20221008183909"></script>
+  <!-- <script src="js/app.min.js?_v=20221014183221"></script> -->
+  <!-- <script src="js/preloader.js?_v=20221014183221"></script> -->
   <script>
+    document.body.onload = function(){
+      let preloader = document.querySelectorAll('.preloader');
+      preloader.forEach((item) => {
+        if(!item.classList.contains('done') ){
+          item.classList.add('done');
+        }
+      });
+    }
+
 let preMain = document.querySelector('.prefooter__main');
 let preBtn = document.querySelector('.prefooter__btn');
 let blur = document.querySelector('.blur');
@@ -347,6 +364,83 @@ preBtn.addEventListener('click', ()=>{
     blur.classList.remove('active');
   }
 });
+
+// String.prototype.equalIgnoreCase = function(str)
+// {
+//     return (str != null 
+//             && typeof str === 'string'
+//             && this.toUpperCase() === str.toUpperCase());
+// }
+
+// var a = "hello";
+// var b = "HeLlo";
+// var c = "world";
+
+// if (a.equalIgnoreCase(b)) {
+//   console.log("a == b");
+// }
+// if (a.equalIgnoreCase(c)) {
+//   console.log("a == c");
+// }
+// if (!b.equalIgnoreCase(c)) {
+//   console.log("b != c");
+// }
+
+let searchBtn = document.querySelector('.search__block .search');
+let searchBlock = document.querySelector('.search__block');
+let searchInput = document.querySelector('.search__input');
+searchBtn.addEventListener('click', ()=>{
+
+  if(!searchBlock.classList.contains('active')){
+    searchBlock.classList.add('active');
+    searchInput.focus();
+  }
+  else{
+    searchBlock.classList.remove('active');
+    searchInput.blur();
+  }
+});
+window.addEventListener("scroll", ()=>{
+  searchBlock.classList.remove('active');
+  searchInput.blur();
+  searchInput.value = '';
+})
+
+let search = document.querySelector('#search');
+
+search.oninput = function(){
+  let val = this.value.trim().toLowerCase();
+  let T = document.querySelectorAll('.novelties__title');
+  let card = document.querySelectorAll('.card');
+  let text = [];
+  for(let i=0; i<T.length; i++){
+    text[i] = T[i].innerText.toLowerCase();
+  }
+  // console.log(text);
+  if(val !=''){
+    for(let i=0; i<card.length; i++){
+      if(text[i].search(val) == -1){
+        card[i].classList.add('hide');
+      } 
+      else{
+        card[i].classList.remove('hide');
+        // let str = text[i].innerText;
+        // text[i] = insertMark(str,text[i].innerText.search(val), val.length);
+      }
+    }
+  } 
+  else{
+    for(let i=0; i<card.length; i++){
+      card[i].classList.remove('hide');
+      text[i].innerHTML = text[i].innerText;
+    }
+  }
+}
+
+function insertMark(string,pos,len){
+  return string.slice(0,pos) + '<mark>' + string.slice(pos, pos+len) + '</mark>' + string.slice(pos+len);
+}
+
   </script>
 </body>
 </html>
